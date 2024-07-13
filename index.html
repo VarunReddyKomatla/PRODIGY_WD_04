@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-12345..."
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header id="home">
+        <div class="container">
+            <nav>
+                <h1>Your Name</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Hello, I'm Your Name</h2>
+                    <p>A passionate web developer dedicated to crafting user-friendly websites and applications.</p>
+                    <a href="#projects" class="btn">View Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-img">
+                    <img src="profile-photo.jpg" alt="Your Name">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Background</h3>
+                    <p>Introduce yourself, your background, and what drives your passion for web development.</p>
+                    <h3>Education</h3>
+                    <p>Describe your educational background related to web development or relevant fields.</p>
+                    <h3>Experience</h3>
+                    <p>Highlight your professional experience, key projects, and roles in web development.</p>
+                </div>
+                <div class="about-img">
+                    <img src="education-work.jpg" alt="Education and Work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-gallery">
+                <!-- Example project item -->
+                <div class="project-item">
+                    <img src="project-thumbnail.jpg" alt="Project Title">
+                    <div class="project-info">
+                        <h3>Project Title</h3>
+                        <p>Short description of the project and your role in its development.</p>
+                        <a href="#" class="btn project-btn" data-project-id="1">View Project <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Repeat project items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="submit-form.php" method="POST" class="contact-form" id="contact-form">
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <textarea name="message" id="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-project-content">
+                <!-- Dynamic content will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
