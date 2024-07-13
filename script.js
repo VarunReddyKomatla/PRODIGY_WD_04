@@ -46,31 +46,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        // Implement form submission logic (e.g., AJAX request)
-        // Example:
-        // const formData = new FormData(contactForm);
-        // fetch('submit-form.php', {
-        //   method: 'POST',
-        //   body: formData
-        // }).then(response => {
-        //   // Handle response
-        // }).catch(error => {
-        //   console.error('Error:', error);
-        // });
-    });
-
-    // Function to fetch project details (mock example)
-    function getProjectContent(projectId) {
-        // Mock example - replace with actual project data fetching logic
-        if (projectId === '1') {
-            return `
-                <h3>Project Title</h3>
-                <p>Detailed description of the project.</p>
-                <p>Technologies used: HTML, CSS, JavaScript, etc.</p>
-                <img src="project-details.jpg" alt="Project Details">
-            `;
-        } else {
-            return ''; // Handle other project IDs
-        }
-    }
-});
+        const formData = new FormData(contactForm);
+        // Replace 'submit-form.php' with your actual form submission endpoint
+        fetch('submit-form.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            // Handle response (e.g., show success message)
+            console.log('Form submitted successfully');
+            contactForm.reset(); // Reset form after submission
+        })
+        .catch(error => {
+            // Handle errors (e.g.,
